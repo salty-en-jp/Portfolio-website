@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="塩田 颯のポートフォリオ">
+  <title>Portfolio | 塩田 颯</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">HAYATE SHIOTA</a>
+      <nav aria-label="メインナビゲーション">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#works">Works</a>
+        <a href="#activities">Activities</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">PORTFOLIO</p>
+        <h1>塩田 颯</h1>
+        <p class="lead">アイデア→トライ→エラー</p>
+        <p class="hero-text">
+          Webアプリケーションやゲームなど、興味を持ったものを<br>
+          企画・実装し、失敗しています。
+        </p>
+        <a class="text-link" href="https://github.com/salty-en-jp" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <p class="section-label">01 / ABOUT</p>
+        <h2>できることを増やしながら、<br>考えたものを確かめようとしています。</h2>
+        <p>
+          Webアプリケーションやゲーム、スマートフォン向けアプリなどを主にバイブコーディングで制作してきました。
+          「何のために作るのか」「どうすれば実際に使えるのか」を
+          考えながら実装することを大切にしています。
+        </p>
+        <p>
+          小さなアイデアでも、まず動かしてみる。そこから試行錯誤を重ねて、
+          いつか仕組みとして成立させていくことを目標にしています。
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <p class="section-label">02 / SKILLS</p>
+        <div class="skill-grid">
+          <div class="skill">
+            <h3>Frontend</h3>
+            <p>HTML / CSS / JavaScript</p>
+          </div>
+          <div class="skill">
+            <h3>Backend</h3>
+            <p>Python / FastAPI / WebSocket</p>
+          </div>
+          <div class="skill">
+            <h3>Development</h3>
+            <p>Git / GitHub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="section">
+      <div class="container">
+        <p class="section-label">03 / WORKS</p>
+
+        <article class="work-card featured">
+          <div class="work-number">01</div>
+          <div class="work-content">
+            <p class="work-type">WEB APPLICATION / PYTHON</p>
+            <h2>Educational Video Creator</h2>
+            <p class="work-lead">動画学習の効率を上げたかった、動画学習管理システム</p>
+            <p>
+              自宅PCで動かしてLAN内の端末から動画教材で学習できるプロトタイプを制作。
+              再生位置をサーバー側で管理し、シークによる飛ばし見や極端な倍速などを検知、実際に視聴した区間を記録します。
+              オリジナル教材のアップロードや、動画途中にクイズを挿入することが可能です。
+            </p>
+            <div class="tags">
+              <span>Python</span><span>FastAPI</span><span>JavaScript</span><span>Uvicorn</span>
+            </div>
+            <ul class="feature-list">
+              <li>5秒ごとのハートビートによる再生位置管理</li>
+              <li>視聴済み区間を基準にした修了判定</li>
+              <li>動画途中のクイズと不正解時の巻き戻し</li>
+              <li>ログイン・管理者画面・コンテンツ管理</li>
+            </ul>
+            <a class="button" href="https://github.com/salty-en-jp/Educational_video_creator" target="_blank" rel="noopener noreferrer">
+              View on GitHub ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="activities" class="section section-alt">
+      <div class="container">
+        <p class="section-label">04 / ACTIVITIES</p>
+        <article class="activity">
+          <div>
+            <p class="work-type">SCHOOL / PUBLICATION</p>
+            <h2>学生ブログ</h2>
+            <p>
+              さいたまIT・WEB専門学校の学生プレスの活動で執筆をしました。
+            </p>
+          </div>
+          <a class="text-link" href="https://www.siw.ac.jp/archives/4059" target="_blank" rel="noopener noreferrer">記事を見る ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="container narrow">
+        <p class="section-label">05 / CONTACT</p>
+        <h2>Thank you for visiting.</h2>
+        <p>作品や制作についてはGitHubをご覧ください。</p>
+        <a class="button" href="https://github.com/salty-en-jp" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Hayate Shiota</p>
+  </footer>
+</body>
+</html>
