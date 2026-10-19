@@ -6,7 +6,7 @@
 //   ALLOW_LOCALHOST … 変数（任意）。"true" にすると localhost からの動作確認を許可
 
 const ALLOWED_ORIGINS = ["https://salty-en-jp.github.io"];
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.5-flash-lite";
 const MAX_CHARS = 1200;
 
 const SYSTEM_PROMPT = `あなたは英語を学ぶ日本人のための、やさしい英会話コーチです。

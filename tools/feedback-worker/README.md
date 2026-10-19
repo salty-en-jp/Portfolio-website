@@ -11,7 +11,7 @@ APIキーをWebページに置かないために使います。
 2. **コードを編集** を開き、中身を `worker.js` の内容に置き換えて **デプロイ**
 3. **設定** → **変数とシークレット** で次を追加
    - `GEMINI_API_KEY`：種類を **シークレット** にして、Google AI Studio で発行したAPIキーを貼る
-   - `GEMINI_MODEL`（任意）：Google AI Studio で使えるモデル名。未設定なら `gemini-2.5-flash`
+   - `GEMINI_MODEL`（任意）：Google AI Studio で使えるモデル名。未設定なら `gemini-3.5-flash-lite`
 4. Worker のURL（`https://elevator-talk-feedback.<アカウント名>.workers.dev`）を `works/elevator-talk/config.js` の `feedbackEndpoint` に書く
 
 ## 守り
