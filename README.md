@@ -100,6 +100,10 @@ https://www.siw.ac.jp/archives/4059
 .
 ├── index.html
 ├── style.css
+├── favicon.svg      # ブラウザのタブに表示するアイコン
+├── ogp.png          # SNS共有時のプレビュー画像（1200×630）
+├── docs/
+│   └── roadmap.md   # リニューアル計画（ガントチャート・完了条件）
 └── README.md
 ```
 
