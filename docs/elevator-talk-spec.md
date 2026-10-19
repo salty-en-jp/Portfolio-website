@@ -84,13 +84,28 @@ GitHub Pages は静的サイトなので、ページの中にAPIキーを書く�
 - 話した内容は外部のAIサービスに送られる。画面にそのことを明記する
 - 文字起こしはブラウザによって精度や対応が違う（特にiPhoneのSafari）
 
+## テーマとセリフの型（v0.1）
+
+レベル1は型を3つ、レベル2は1つ目だけ、レベル3は型なしで話す。
+英語が自然かどうかは本人が最終確認する。
+
+| # | テーマ | セリフの型 |
+|---|---|---|
+| 1 | 自己紹介 | Hi, I'm ___. / I'm a student at ___. / In my free time, I ___. |
+| 2 | 好きな食べ物 | My favorite food is ___. / I like it because ___. / The best place to eat it is ___. |
+| 3 | 週末の予定 | This weekend, I'm going to ___. / I'm looking forward to it because ___. / If it rains, I'll ___. |
+| 4 | おすすめの場所 | You should visit ___. / It's famous for ___. / The best time to go is ___. |
+| 5 | 最近ハマっていること | Lately, I've been into ___. / I got into it when ___. / What I like most about it is ___. |
+
 ## 置き場所
 
 このポートフォリオの `works/elevator-talk/` に置き、GitHub Pages で公開する。
 
 ## 未決事項
 
-- [ ] 最初の5テーマ
-- [ ] セリフの型（案は Claude が出し、自然な英語かは本人が確認）
-- [ ] APIキーの扱い（A／B／C）
-- [ ] 使うAIサービス
+- [x] 最初の5テーマ（上の表）
+- [ ] セリフの型が自然な英語か、本人が確認
+- [x] APIキーの扱い：A（中継サーバー）。間に合わなければ C に切り替える
+- [x] 使うAIサービス：Gemini API（無料枠）＋ Cloudflare Workers で中継（暫定）
+- [ ] Google AI Studio で APIキーを発行（本人）
+- [ ] Cloudflare アカウントを作成（本人）
