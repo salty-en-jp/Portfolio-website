@@ -27,7 +27,13 @@
 
       <div class="controls">
         <label>テーマ
-          <select id="theme"></select>
+          <select id="theme">
+            <option value="0">自己紹介</option>
+            <option value="1">好きな食べ物</option>
+            <option value="2">週末の予定</option>
+            <option value="3">おすすめの場所</option>
+            <option value="4">最近ハマっていること</option>
+          </select>
         </label>
         <label>レベル
           <select id="level">
@@ -55,8 +61,12 @@
         </div>
         <div class="card">
           <p class="card-label">THEME</p>
-          <p class="theme-title" id="themeTitle"></p>
-          <ul class="templates" id="templates"></ul>
+          <p class="theme-title" id="themeTitle">自己紹介</p>
+          <ul class="templates" id="templates">
+            <li>Hi, I'm ___.</li>
+            <li>I'm a student at ___.</li>
+            <li>In my free time, I ___.</li>
+          </ul>
           <p class="timer"><span id="floor">1F</span><span id="seconds">30</span></p>
         </div>
       </div>

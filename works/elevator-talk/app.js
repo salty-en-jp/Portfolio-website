@@ -48,7 +48,10 @@
   });
 
   // ---------- theme & templates ----------
-  THEMES.forEach((t, i) => el.theme.add(new Option(t.title, String(i))));
+  // Options are pre-rendered in HTML to avoid layout shift; rebuild only if they drift from data.js.
+  if (el.theme.options.length !== THEMES.length || [...el.theme.options].some((o, i) => o.text !== THEMES[i].title)) {
+    el.theme.replaceChildren(...THEMES.map((t, i) => new Option(t.title, String(i))));
+  }
 
   function currentTheme() {
     return THEMES[Number(el.theme.value)];
