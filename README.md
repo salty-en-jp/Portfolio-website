@@ -103,7 +103,12 @@ https://www.siw.ac.jp/archives/4059
 ├── favicon.svg      # ブラウザのタブに表示するアイコン
 ├── ogp.png          # SNS共有時のプレビュー画像（1200×630）
 ├── docs/
-│   └── roadmap.md   # リニューアル計画（ガントチャート・完了条件）
+│   ├── roadmap.md               # リニューアル計画（ガントチャート・完了条件）
+│   └── elevator-talk-spec.md    # 英語学習ツールの仕様書
+├── works/
+│   └── elevator-talk/           # 英語学習ツール Elevator Talk（静的ページ）
+├── tools/
+│   └── feedback-worker/         # AIフィードバック用の中継サーバー（Cloudflare Workers）
 └── README.md
 ```
 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="セリフの型を手がかりに、30秒で英語を話し切る練習ツール。">
+  <title>Elevator Talk | 塩田 颯</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <a class="back" href="../../#works">← Portfolio</a>
+      <nav class="tabs" aria-label="モード切り替え">
+        <button type="button" class="tab is-active" data-tab="talk" aria-pressed="true">エレベータートーク</button>
+        <button type="button" class="tab" data-tab="check" aria-pressed="false">違和感チェック</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Elevator Talk -->
+    <section id="talk" class="panel">
+      <h1>Elevator Talk</h1>
+      <p class="lead">1階から5階に着くまでの30秒で、テーマについて英語で話し切る練習です。<br>セリフの型を手がかりに、まずは最後まで話すことを目指します。</p>
+
+      <div class="controls">
+        <label>テーマ
+          <select id="theme"></select>
+        </label>
+        <label>レベル
+          <select id="level">
+            <option value="1">1：型を3つ使う</option>
+            <option value="2">2：最初の型だけ</option>
+            <option value="3">3：型なし</option>
+          </select>
+        </label>
+        <label>時間
+          <select id="duration">
+            <option value="30">30秒</option>
+            <option value="45">45秒</option>
+            <option value="60">60秒</option>
+          </select>
+        </label>
+        <button type="button" id="shuffle" class="ghost">ランダム</button>
+      </div>
+
+      <div class="stage">
+        <div class="elevator" aria-hidden="true">
+          <ol class="floors">
+            <li>5F</li><li>4F</li><li>3F</li><li>2F</li><li>1F</li>
+          </ol>
+          <div class="car" id="car"></div>
+        </div>
+        <div class="card">
+          <p class="card-label">THEME</p>
+          <p class="theme-title" id="themeTitle"></p>
+          <ul class="templates" id="templates"></ul>
+          <p class="timer"><span id="floor">1F</span><span id="seconds">30</span></p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="start" class="primary">スタート</button>
+        <button type="button" id="mic" class="ghost" hidden>マイクで話す：オフ</button>
+      </div>
+      <p class="note" id="micNote"></p>
+
+      <label class="answer-label" for="answer">話した内容（キーボード・スマホの音声入力でも入力できます）</label>
+      <textarea id="answer" rows="5" placeholder="例：My favorite food is ramen. I like it because ..."></textarea>
+
+      <div class="selfcheck" id="selfcheck" hidden>
+        <p>最後まで話し切れましたか？</p>
+        <button type="button" class="ghost" data-result="done">話し切れた</button>
+        <button type="button" class="ghost" data-result="stuck">途中で止まった</button>
+      </div>
+
+      <div class="feedback-actions">
+        <button type="button" id="feedbackBtn" class="primary" disabled>AIにフィードバックをもらう</button>
+        <p class="note">送信した文章は外部のAIサービス（Google Gemini）に送られます。個人情報は入力しないでください。</p>
+      </div>
+
+      <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+
+      <section class="history">
+        <h2>これまでの記録</h2>
+        <p id="stats" class="note"></p>
+      </section>
+    </section>
+
+    <!-- Odd-one-out check -->
+    <section id="check" class="panel" hidden>
+      <h1>違和感チェック</h1>
+      <p class="lead">意味は通じるけれど、ちょっと不自然な英文です。<br>いちばん自然な言い方を選んでください。</p>
+      <div class="controls">
+        <label>出題
+          <select id="checkMode">
+            <option value="basic">通常問題</option>
+            <option value="mine">自分のまちがい</option>
+          </select>
+        </label>
+      </div>
+      <div class="card quiz" id="quiz"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>入力内容と記録は、このブラウザの中にだけ保存されます。</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
