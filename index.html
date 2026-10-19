@@ -72,7 +72,7 @@
           <div class="skill">
             <h3>Frontend</h3>
             <p>HTML / CSS / JavaScript</p>
-            <small>使用作品：Educational Video Creator、このポートフォリオサイト</small>
+            <small>使用作品：Educational Video Creator、Elevator Talk、このポートフォリオサイト</small>
           </div>
           <div class="skill">
             <h3>Backend</h3>
@@ -162,6 +162,55 @@
             </p>
             <div class="tags">
               <span>競合リサーチ</span><span>データセット選定</span><span>画像認識AI</span><span>アプリ開発</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-number">03</div>
+          <div class="work-content">
+            <p class="work-type">WEB APPLICATION / JAVASCRIPT / AI</p>
+            <h2>Elevator Talk</h2>
+            <p class="work-lead">「セリフの型があれば、英語を話し切れるか」を確かめる、英語スピーキング練習ツール</p>
+            <figure class="work-shot">
+              <img src="images/et-stage.webp" width="960" height="296" loading="lazy"
+                alt="テーマ「好きな食べ物」とセリフの型3つ、エレベーターが3階、残り17秒と表示された練習画面">
+              <figcaption>1階から5階に着くまでの30秒で、セリフの型を手がかりに話し切ります。</figcaption>
+            </figure>
+            <h3>きっかけ</h3>
+            <p>
+              帰国後、「なんか英語で言ってよ」と言われるたびに困った一方で、劇や歌ならセリフが自然に出てきました。
+              そこから「話せないのは単語を知らないからではなく、場面とセリフがないからではないか」という仮説を立て、
+              考案中の英語サークル企画の「エレベータートーク」と「違和感チェック」を土台に作りました。
+            </p>
+            <h3>つくったもの</h3>
+            <p>
+              テーマごとにセリフの型を3段階（3つ／1つ／なし）で出し、30〜60秒のタイマーの間に話し切る練習ができます。
+              入力はキーボード・スマホの音声入力・マイクの文字起こしに対応。
+              AI（Gemini）が「よかったところ」と「改善ポイント」を返し、改善ポイントは自分専用の違和感チェック問題として出題されます。
+            </p>
+            <figure class="work-shot">
+              <img src="images/et-feedback.webp" width="960" height="413" loading="lazy"
+                alt="AIのフィードバック画面。よかったところ3つと、改善ポイント「we eat a lot → we ate a lot」が表示されている">
+              <figcaption>実際のAIフィードバック。改善ポイントは「自分のまちがい」として違和感チェックに保存されます。</figcaption>
+            </figure>
+            <div class="tags">
+              <span>JavaScript</span><span>Web Speech API</span><span>Gemini API</span><span>Cloudflare Workers</span><span>GitHub Pages</span>
+            </div>
+            <h3>工夫したこと</h3>
+            <ul class="feature-list">
+              <li>宝探しの反省（教えすぎると暗記ゲーム、知らないと理不尽ゲーム）から、型の数をレベルで調整できるようにした</li>
+              <li>マイクが使えない環境でも使えるよう、キーボード入力を基本にした</li>
+              <li>APIキーを守るため、Cloudflare Workers で中継し、自分のサイト以外からの呼び出しを拒否</li>
+              <li>記録や自分のまちがいは、ブラウザの中だけに保存</li>
+            </ul>
+            <h3>これから確かめること</h3>
+            <p>
+              サークルのメンバーに使ってもらい、型がある場合とない場合で「話し切れた」割合がどう変わるかを記録して、仮説を確かめます。
+            </p>
+            <div class="button-row">
+              <a class="button" href="works/elevator-talk/">使ってみる</a>
+              <a class="button button-outline" href="https://github.com/salty-en-jp/Portfolio-website/tree/main/works/elevator-talk" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
             </div>
           </div>
         </article>
