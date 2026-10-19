@@ -220,6 +220,38 @@ nav a:hover {
   line-height: 1.35;
 }
 
+.work-content h3 {
+  margin: 36px 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.work-shot {
+  margin: 28px 0 0;
+}
+
+.work-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  background: #111;
+}
+
+.work-shot figcaption {
+  margin-top: 8px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.work-shots {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+
 .work-lead {
   margin-top: 0;
   color: #333 !important;
@@ -356,6 +388,10 @@ footer p {
   .work-card {
     grid-template-columns: 1fr;
     padding: 30px;
+  }
+
+  .work-shots {
+    grid-template-columns: 1fr;
   }
 
   .activity {
