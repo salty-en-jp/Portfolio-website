@@ -300,6 +300,56 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
+.sub-heading {
+  margin: 48px 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.timeline {
+  margin: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.timeline div {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.timeline dt {
+  color: #595959;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+
+.timeline dd {
+  margin: 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-outline {
+  color: #222;
+  background: transparent;
+  border: 1px solid #222;
+}
+
+.button-outline:hover {
+  color: #fff;
+}
+
 .activity {
   display: flex;
   align-items: flex-end;
@@ -396,6 +446,10 @@ footer p {
 
   .activity {
     display: block;
+  }
+
+  .closing h2 {
+    font-size: 30px;
   }
 
   .activity .text-link {
