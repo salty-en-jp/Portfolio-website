@@ -20,6 +20,11 @@ a {
   color: inherit;
 }
 
+h1,
+h2 {
+  word-break: auto-phrase;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -30,15 +35,19 @@ a {
 }
 
 .header-inner {
-  max-width: 1120px;
+  width: min(1120px, calc(100% - 56px));
   margin: 0 auto;
-  padding: 18px 28px;
+  padding: 12px 0;
   display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
+  display: inline-block;
+  padding: 6px 0;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -47,11 +56,14 @@ a {
 
 nav {
   display: flex;
-  gap: 28px;
+  flex-wrap: wrap;
+  gap: 0 16px;
 }
 
 nav a {
-  color: #666;
+  display: inline-block;
+  padding: 6px 4px;
+  color: #555;
   font-size: 13px;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -71,22 +83,22 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 78vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee;
 }
 
 .hero-inner {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .eyebrow,
 .section-label,
 .work-type {
   margin: 0 0 18px;
-  color: #777;
-  font-size: 11px;
+  color: #595959;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
 }
@@ -113,11 +125,11 @@ nav a:hover {
 
 .text-link {
   display: inline-block;
+  padding: 6px 0 2px;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid #222;
-  padding-bottom: 2px;
 }
 
 .text-link:hover {
@@ -125,7 +137,7 @@ nav a:hover {
 }
 
 .section {
-  padding: 140px 0;
+  padding: 96px 0;
 }
 
 .section-alt {
@@ -175,8 +187,8 @@ nav a:hover {
 .skill small {
   display: block;
   margin-top: 12px;
-  color: #888;
-  font-size: 11px;
+  color: #666;
+  font-size: 12px;
   line-height: 1.7;
 }
 
@@ -208,6 +220,38 @@ nav a:hover {
   line-height: 1.35;
 }
 
+.work-content h3 {
+  margin: 36px 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.work-shot {
+  margin: 28px 0 0;
+}
+
+.work-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  background: #111;
+}
+
+.work-shot figcaption {
+  margin-top: 8px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.work-shots {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+
 .work-lead {
   margin-top: 0;
   color: #333 !important;
@@ -225,8 +269,8 @@ nav a:hover {
   padding: 4px 10px;
   border: 1px solid #ddd;
   border-radius: 999px;
-  color: #666;
-  font-size: 11px;
+  color: #555;
+  font-size: 12px;
 }
 
 .feature-list {
@@ -256,6 +300,56 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
+.sub-heading {
+  margin: 48px 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.timeline {
+  margin: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.timeline div {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.timeline dt {
+  color: #595959;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+
+.timeline dd {
+  margin: 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-outline {
+  color: #222;
+  background: transparent;
+  border: 1px solid #222;
+}
+
+.button-outline:hover {
+  color: #fff;
+}
+
 .activity {
   display: flex;
   align-items: flex-end;
@@ -264,6 +358,10 @@ nav a:hover {
   padding: 42px 0;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+}
+
+.activity + .activity {
+  border-top: none;
 }
 
 .activity h2 {
@@ -276,7 +374,7 @@ nav a:hover {
 }
 
 .closing {
-  min-height: 55vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
 }
@@ -293,26 +391,27 @@ footer {
 
 footer p {
   margin: 0;
-  color: #999;
-  font-size: 11px;
+  color: #666;
+  font-size: 12px;
   letter-spacing: 0.08em;
 }
 
 @media (max-width: 700px) {
   .header-inner {
-    padding: 15px 20px;
+    width: calc(100% - 40px);
+    padding: 8px 0;
   }
 
   .logo {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   nav {
-    gap: 14px;
+    gap: 0 10px;
   }
 
   nav a {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .container,
@@ -321,7 +420,7 @@ footer p {
   }
 
   .hero-inner {
-    padding: 90px 0;
+    padding: 64px 0;
   }
 
   .hero-text br {
@@ -329,7 +428,7 @@ footer p {
   }
 
   .section {
-    padding: 90px 0;
+    padding: 72px 0;
   }
 
   .skill-grid {
@@ -341,8 +440,16 @@ footer p {
     padding: 30px;
   }
 
+  .work-shots {
+    grid-template-columns: 1fr;
+  }
+
   .activity {
     display: block;
+  }
+
+  .closing h2 {
+    font-size: 30px;
   }
 
   .activity .text-link {
