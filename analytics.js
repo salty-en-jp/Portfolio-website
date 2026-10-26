@@ -1,20 +1,11 @@
-// Google アナリティクス 4（GA4）
-// MEASUREMENT_ID に GA4 の測定ID（G- で始まる）を入れると計測が始まる。空のままなら何もしない。
+// GA4 の独自イベント
+// タグ本体（gtag.js）は各ページの <head> のすぐ下に直接貼ってある。このファイルはイベントを送るだけ。
 (function () {
   "use strict";
 
-  var MEASUREMENT_ID = "G-6JSTE2WZ4C";
-  if (!MEASUREMENT_ID) return;
-
-  var s = document.createElement("script");
-  s.async = true;
-  s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(MEASUREMENT_ID);
-  document.head.appendChild(s);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { window.dataLayer.push(arguments); };
-  window.gtag("js", new Date());
-  window.gtag("config", MEASUREMENT_ID);
+  function send(name, params) {
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  }
 
   function ready(fn) {
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
@@ -27,7 +18,7 @@
     if (works && "IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
         if (entries.some(function (e) { return e.isIntersecting; })) {
-          window.gtag("event", "view_works");
+          send("view_works");
           io.disconnect();
         }
       }, { threshold: 0.15 });
@@ -37,13 +28,13 @@
     // ボタンのクリック：data-track の値をラベルとして送る
     document.addEventListener("click", function (e) {
       var el = e.target.closest && e.target.closest("[data-track]");
-      if (el) window.gtag("event", "cta_click", { cta_name: el.getAttribute("data-track") });
+      if (el) send("cta_click", { cta_name: el.getAttribute("data-track") });
     });
 
     // 「詳しく見る」を開いたとき
     document.querySelectorAll("details.work-details").forEach(function (d, i) {
       d.addEventListener("toggle", function () {
-        if (d.open) window.gtag("event", "open_details", { work_index: i + 1 });
+        if (d.open) send("open_details", { work_index: i + 1 });
       });
     });
   });
