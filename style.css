@@ -340,6 +340,62 @@ nav a:hover {
   gap: 12px;
 }
 
+.hero-actions {
+  margin-bottom: 24px;
+}
+
+.work-details {
+  margin: 28px 0 32px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.work-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.work-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-details summary::after {
+  content: "＋";
+  flex: none;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.work-details[open] summary::after {
+  content: "－";
+}
+
+.work-details summary:hover {
+  opacity: 0.6;
+}
+
+.work-details summary:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 2px;
+}
+
+.work-details[open] {
+  padding-bottom: 24px;
+}
+
+.work-details > .work-shots,
+.work-details > h3:first-of-type {
+  margin-top: 8px;
+}
+
 .button-outline {
   color: #222;
   background: transparent;
