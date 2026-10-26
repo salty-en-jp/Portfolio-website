@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var MEASUREMENT_ID = "";
+  var MEASUREMENT_ID = "G-6JSTE2WZ4C";
   if (!MEASUREMENT_ID) return;
 
   var s = document.createElement("script");
