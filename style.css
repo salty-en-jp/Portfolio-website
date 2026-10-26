@@ -512,3 +512,15 @@ footer p {
     margin-top: 24px;
   }
 }
+
+footer .privacy {
+  max-width: 640px;
+  margin: 12px auto 0;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+footer .privacy a {
+  display: inline-block;
+  padding: 4px 0;
+}
