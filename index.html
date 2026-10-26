@@ -38,6 +38,10 @@
         <p class="hero-text">
           さいたまIT・WEB専門学校（4年制）在学中／2028年卒業予定。<br>学習支援を中心に、Webアプリケーションやゲームなど<br>興味を持ったものを企画・実装しています。
         </p>
+        <div class="button-row hero-actions">
+          <a class="button" href="#works">作品を見る</a>
+          <a class="button button-outline" href="works/elevator-talk/">Elevator Talk を試す</a>
+        </div>
         <a class="text-link" href="https://github.com/salty-en-jp" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </div>
     </section>
@@ -103,46 +107,49 @@
                 alt="動画の再生中に確認クイズが表示され、下に視聴進捗31%と視聴済み区間4/13が表示されている画面">
               <figcaption>動画の途中で出題される確認クイズ。視聴済みの区間はサーバー側で記録します。</figcaption>
             </figure>
-            <div class="work-shots">
-              <figure class="work-shot">
-                <img src="images/evc-admin-progress.webp" width="1160" height="390" loading="lazy"
-                  alt="管理画面の受講状況タブ。レッスンごとに視聴率とクイズ通過数が表で並んでいる">
-                <figcaption>管理画面：受講者ごとの視聴率とクイズ通過数</figcaption>
-              </figure>
-              <figure class="work-shot">
-                <img src="images/evc-admin-content.webp" width="745" height="1068" loading="lazy"
-                  alt="管理画面のコンテンツ管理タブ。動画のアップロード欄とクイズ作成フォームが並んでいる">
-                <figcaption>管理画面：動画の追加とクイズ作成をGUIで行えます</figcaption>
-              </figure>
-            </div>
-            <h3>つくったもの</h3>
-            <p>
-              自宅PCで動かしてLAN内の端末から動画教材で学習できるプロトタイプを制作。
-              再生位置をサーバー側で管理し、シークによる飛ばし見や極端な倍速などを検知、実際に視聴した区間を記録します。
-              オリジナル教材のアップロードや字幕の追加、動画途中にクイズを挿入することが可能です。
-              スマホで撮った動画一本あれば、字幕とクイズ付の動画教材を作ることが出来るアプリです。
-            </p>
             <div class="tags">
               <span>Python</span><span>FastAPI</span><span>WebSocket</span><span>JavaScript</span><span>Uvicorn</span>
             </div>
-            <h3>工夫したこと</h3>
-            <ul class="feature-list">
-              <li>5秒ごとのハートビートによる再生位置管理</li>
-              <li>視聴済み区間を基準にした修了判定</li>
-              <li>動画途中のクイズと不正解時の巻き戻し</li>
-              <li>ログイン・管理者画面・コンテンツ管理</li>
-            </ul>
-            <h3>結果</h3>
-            <p>
-              スマホで撮影した動画をPCの指定フォルダに置くだけで、LAN内の端末から視聴できるところまで完成させました。
-              ログイン・アカウント管理、字幕ファイルの追加、GUIからのクイズ作成など、基本的な機能はすべて動作しています。
-            </p>
-            <h3>学び</h3>
-            <p>
-              教材を自分で撮影したため、自分自身の学習にはあまりつながりませんでした。
-              仕組みが動いても、教材の中身と使う人がそろわなければ学習効果は生まれない、ということを実感しました。
-              次は他の人に使ってもらい、教材側の課題も確かめたいと考えています。
-            </p>
+            <details class="work-details">
+              <summary>詳しく見る（つくったもの・工夫・結果・学び）</summary>
+              <div class="work-shots">
+                <figure class="work-shot">
+                  <img src="images/evc-admin-progress.webp" width="1160" height="390" loading="lazy"
+                    alt="管理画面の受講状況タブ。レッスンごとに視聴率とクイズ通過数が表で並んでいる">
+                  <figcaption>管理画面：受講者ごとの視聴率とクイズ通過数</figcaption>
+                </figure>
+                <figure class="work-shot">
+                  <img src="images/evc-admin-content.webp" width="745" height="1068" loading="lazy"
+                    alt="管理画面のコンテンツ管理タブ。動画のアップロード欄とクイズ作成フォームが並んでいる">
+                  <figcaption>管理画面：動画の追加とクイズ作成をGUIで行えます</figcaption>
+                </figure>
+              </div>
+              <h3>つくったもの</h3>
+              <p>
+                自宅PCで動かしてLAN内の端末から動画教材で学習できるプロトタイプを制作。
+                再生位置をサーバー側で管理し、シークによる飛ばし見や極端な倍速などを検知、実際に視聴した区間を記録します。
+                オリジナル教材のアップロードや字幕の追加、動画途中にクイズを挿入することが可能です。
+                スマホで撮った動画一本あれば、字幕とクイズ付の動画教材を作ることが出来るアプリです。
+              </p>
+              <h3>工夫したこと</h3>
+              <ul class="feature-list">
+                <li>5秒ごとのハートビートによる再生位置管理</li>
+                <li>視聴済み区間を基準にした修了判定</li>
+                <li>動画途中のクイズと不正解時の巻き戻し</li>
+                <li>ログイン・管理者画面・コンテンツ管理</li>
+              </ul>
+              <h3>結果</h3>
+              <p>
+                スマホで撮影した動画をPCの指定フォルダに置くだけで、LAN内の端末から視聴できるところまで完成させました。
+                ログイン・アカウント管理、字幕ファイルの追加、GUIからのクイズ作成など、基本的な機能はすべて動作しています。
+              </p>
+              <h3>学び</h3>
+              <p>
+                教材を自分で撮影したため、自分自身の学習にはあまりつながりませんでした。
+                仕組みが動いても、教材の中身と使う人がそろわなければ学習効果は生まれない、ということを実感しました。
+                次は他の人に使ってもらい、教材側の課題も確かめたいと考えています。
+              </p>
+            </details>
             <a class="button" href="https://github.com/salty-en-jp/Educational_video_creator" target="_blank" rel="noopener noreferrer">
               View on GitHub ↗
             </a>
@@ -177,37 +184,40 @@
                 alt="テーマ「好きな食べ物」とセリフの型3つ、エレベーターが3階、残り17秒と表示された練習画面">
               <figcaption>1階から5階に着くまでの30秒で、セリフの型を手がかりに話し切ります。</figcaption>
             </figure>
-            <h3>きっかけ</h3>
-            <p>
-              帰国後、「なんか英語で言ってよ」と言われるたびに困った一方で、劇や歌ならセリフが自然に出てきました。
-              そこから「話せないのは単語を知らないからではなく、場面とセリフがないからではないか」という仮説を立て、
-              考案中の英語サークル企画の「エレベータートーク」と「違和感チェック」を土台に作りました。
-            </p>
-            <h3>つくったもの</h3>
-            <p>
-              テーマごとにセリフの型を3段階（3つ／1つ／なし）で出し、30〜60秒のタイマーの間に話し切る練習ができます。
-              入力はキーボード・スマホの音声入力・マイクの文字起こしに対応。
-              AI（Gemini）が「よかったところ」と「改善ポイント」を返し、改善ポイントは自分専用の違和感チェック問題として出題されます。
-            </p>
-            <figure class="work-shot">
-              <img src="images/et-feedback.webp" width="960" height="413" loading="lazy"
-                alt="AIのフィードバック画面。よかったところ3つと、改善ポイント「we eat a lot → we ate a lot」が表示されている">
-              <figcaption>実際のAIフィードバック。改善ポイントは「自分のまちがい」として違和感チェックに保存されます。</figcaption>
-            </figure>
             <div class="tags">
               <span>JavaScript</span><span>Web Speech API</span><span>Gemini API</span><span>Cloudflare Workers</span><span>GitHub Pages</span>
             </div>
-            <h3>工夫したこと</h3>
-            <ul class="feature-list">
-              <li>宝探しの反省（教えすぎると暗記ゲーム、知らないと理不尽ゲーム）から、型の数をレベルで調整できるようにした</li>
-              <li>マイクが使えない環境でも使えるよう、キーボード入力を基本にした</li>
-              <li>APIキーを守るため、Cloudflare Workers で中継し、自分のサイト以外からの呼び出しを拒否</li>
-              <li>記録や自分のまちがいは、ブラウザの中だけに保存</li>
-            </ul>
-            <h3>これから確かめること</h3>
-            <p>
-              サークルのメンバーに使ってもらい、型がある場合とない場合で「話し切れた」割合がどう変わるかを記録して、仮説を確かめます。
-            </p>
+            <details class="work-details">
+              <summary>詳しく見る（きっかけ・つくったもの・工夫）</summary>
+              <h3>きっかけ</h3>
+              <p>
+                帰国後、「なんか英語で言ってよ」と言われるたびに困った一方で、劇や歌ならセリフが自然に出てきました。
+                そこから「話せないのは単語を知らないからではなく、場面とセリフがないからではないか」という仮説を立て、
+                考案中の英語サークル企画の「エレベータートーク」と「違和感チェック」を土台に作りました。
+              </p>
+              <h3>つくったもの</h3>
+              <p>
+                テーマごとにセリフの型を3段階（3つ／1つ／なし）で出し、30〜60秒のタイマーの間に話し切る練習ができます。
+                入力はキーボード・スマホの音声入力・マイクの文字起こしに対応。
+                AI（Gemini）が「よかったところ」と「改善ポイント」を返し、改善ポイントは自分専用の違和感チェック問題として出題されます。
+              </p>
+              <figure class="work-shot">
+                <img src="images/et-feedback.webp" width="960" height="413" loading="lazy"
+                  alt="AIのフィードバック画面。よかったところ3つと、改善ポイント「we eat a lot → we ate a lot」が表示されている">
+                <figcaption>実際のAIフィードバック。改善ポイントは「自分のまちがい」として違和感チェックに保存されます。</figcaption>
+              </figure>
+              <h3>工夫したこと</h3>
+              <ul class="feature-list">
+                <li>宝探しの反省（教えすぎると暗記ゲーム、知らないと理不尽ゲーム）から、型の数をレベルで調整できるようにした</li>
+                <li>マイクが使えない環境でも使えるよう、キーボード入力を基本にした</li>
+                <li>APIキーを守るため、Cloudflare Workers で中継し、自分のサイト以外からの呼び出しを拒否</li>
+                <li>記録や自分のまちがいは、ブラウザの中だけに保存</li>
+              </ul>
+              <h3>これから確かめること</h3>
+              <p>
+                サークルのメンバーに使ってもらい、型がある場合とない場合で「話し切れた」割合がどう変わるかを記録して、仮説を確かめます。
+              </p>
+            </details>
             <div class="button-row">
               <a class="button" href="works/elevator-talk/">使ってみる</a>
               <a class="button button-outline" href="https://github.com/salty-en-jp/Portfolio-website/tree/main/works/elevator-talk" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
