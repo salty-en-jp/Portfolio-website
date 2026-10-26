@@ -113,8 +113,13 @@
     paint(totalSeconds());
   }
 
+  function track(name, params) {
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  }
+
   function startTimer() {
     running = true;
+    track("et_start", { theme: currentTheme().id, level: Number(el.level.value) });
     endAt = Date.now() + totalSeconds() * 1000;
     el.start.textContent = "ストップ";
     el.selfcheck.hidden = true;
@@ -273,6 +278,7 @@
       const data = await res.json();
       renderFeedback(data);
       saveMistakes(data.improvements || []);
+      track("et_feedback", { theme: currentTheme().id, level: Number(el.level.value) });
     } catch (err) {
       el.feedback.replaceChildren(makeP("フィードバックを取得できませんでした。時間をおいてもう一度試してください。", "error"));
     } finally {
