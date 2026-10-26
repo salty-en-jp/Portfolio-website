@@ -49,13 +49,6 @@ Repository:
 
 https://github.com/salty-en-jp/Educational_video_creator
 
-### オリジナル画像認識AIの開発（チームプロジェクト）
-
-前職研究者の方の指導のもと、チームでオリジナルの画像認識AIを開発したプロジェクトです。
-
-担当したのは実装ではなく、競合サービスのリサーチと、
-モデルの精度を比較するためのベンチマーク用データセットの選定でした。
-
 ## Skills
 
 ### Frontend
