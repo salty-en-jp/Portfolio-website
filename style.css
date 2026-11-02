@@ -224,7 +224,8 @@ nav a:hover {
   margin: 28px 0 0;
 }
 
-.work-shot img {
+.work-shot img,
+.work-shot video {
   display: block;
   width: 100%;
   height: auto;
