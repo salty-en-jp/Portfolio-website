@@ -27,8 +27,8 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261102">
-  <script src="analytics.js?v=20261102" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261102b">
+  <script src="analytics.js?v=20261102b" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -47,6 +47,7 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-inner">
+        <div class="hero-copy">
         <p class="eyebrow">PORTFOLIO</p>
         <h1>塩田 颯</h1>
         <p class="hero-text">
@@ -57,6 +58,21 @@
           <a class="button button-outline" href="works/elevator-talk/" data-track="hero_try_elevator_talk">Elevator Talk を試す</a>
         </div>
         <a class="text-link" href="https://github.com/salty-en-jp" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+        <div class="hero-visual">
+          <a class="hero-card hero-card-evc" href="#work-evc" data-track="hero_card_evc">
+            <img src="images/hero-evc.webp" width="560" height="399" loading="lazy" alt="Educational Video Creator：動画の途中で出題される確認クイズの画面">
+            <span>01 Educational Video Creator</span>
+          </a>
+          <a class="hero-card hero-card-mech" href="#work-mech" data-track="hero_card_mech">
+            <img src="images/hero-mech.webp" width="560" height="276" loading="lazy" alt="メカローグライク：4機にロックオンしてミサイルを撃つ空中戦の画面">
+            <span>03 メカローグライク</span>
+          </a>
+          <a class="hero-card hero-card-et" href="#work-et" data-track="hero_card_et">
+            <img src="images/hero-et.webp" width="560" height="173" loading="lazy" alt="Elevator Talk：セリフの型とエレベーターのタイマーが並ぶ練習画面">
+            <span>02 Elevator Talk</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -113,7 +129,7 @@
       <div class="container">
         <p class="section-label">03 / WORKS</p>
 
-        <article class="work-card featured">
+        <article class="work-card featured" id="work-evc">
           <div class="work-number">01</div>
           <div class="work-content">
             <p class="work-type">WEB APPLICATION / PYTHON</p>
@@ -173,7 +189,7 @@
           </div>
         </article>
 
-        <article class="work-card">
+        <article class="work-card" id="work-et">
           <div class="work-number">02</div>
           <div class="work-content">
             <p class="work-type">WEB APPLICATION / JAVASCRIPT / AI</p>
@@ -224,7 +240,7 @@
           </div>
         </article>
 
-        <article class="work-card">
+        <article class="work-card" id="work-mech">
           <div class="work-number">03</div>
           <div class="work-content">
             <p class="work-type">GAME / 3D / THREE.JS</p>
