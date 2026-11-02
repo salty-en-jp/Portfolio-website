@@ -346,6 +346,32 @@ nav a:hover {
   font-size: 17px !important;
 }
 
+.work-role {
+  margin: 24px 0 0;
+  padding: 14px 18px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.work-role p {
+  margin: 0;
+}
+
+.work-role p + p {
+  margin-top: 6px;
+  color: #555;
+}
+
+.work-role strong {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
