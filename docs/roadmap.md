@@ -59,9 +59,10 @@ gantt
 
 - [ ] PageSpeed Insights（https://pagespeed.web.dev/）でトップと Elevator Talk を測る（Lighthouse では 2026-10-19 に全項目100を確認済み）
 - [ ] 実機のスマホでトップと Elevator Talk の表示を確認する（iPhone と Android）
+- [x] Elevator Talk のキーボード入力でAIフィードバックまで動くことを確認する
 - [ ] 実機のスマホで Elevator Talk のマイク入力（文字起こし）を試す。特に iPhone の Safari
-- [ ] お問い合わせフォームのボタンを押し、フォームが開いて回答を受け付けているか確認する
-- [ ] LINE や Slack にURLを貼り、OGP画像が表示されるか確認する
+- [x] お問い合わせフォームのボタンを押し、フォームが開いて回答を受け付けているか確認する
+- [ ] LINE や Slack にURLを貼り、OGP画像が表示されるか確認する（トップと Elevator Talk の両方）
 - [ ] Elevator Talk のセリフの型（`works/elevator-talk/data.js` の THEMES）が自然な英語か確認する
 - [ ] 違和感チェック8問（同じく CHECK_QUESTIONS）の英語と解説を確認する。特に「very delicious」「play with」の2問
 - [ ] サークルのメンバーに Elevator Talk を使ってもらい、型ありと型なしで「話し切れた」割合を比べる
