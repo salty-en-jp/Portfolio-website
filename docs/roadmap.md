@@ -60,7 +60,7 @@ gantt
 - [x] PageSpeed Insights（https://pagespeed.web.dev/）でトップと Elevator Talk を測る（2026-11-02、公開中のサイトを同じエンジンの Lighthouse で計測。PCは全項目100。スマホは Performance がトップ87・Elevator Talk 83で、ほかは100。差はほぼ Google アナリティクスのスクリプトの読み込み分）
 - [ ] 実機のスマホでトップと Elevator Talk の表示を確認する（iPhone と Android）
 - [x] Elevator Talk のキーボード入力でAIフィードバックまで動くことを確認する
-- [ ] 実機のスマホで Elevator Talk のマイク入力（文字起こし）を試す。特に iPhone の Safari
+- [x] 実機のスマホで Elevator Talk のマイク入力（文字起こし）を試す。特に iPhone の Safari（2026-11-02、スマホのブラウザで動作を確認）
 - [x] お問い合わせフォームのボタンを押し、フォームが開いて回答を受け付けているか確認する
 - [x] LINE や Slack にURLを貼り、OGP画像が表示されるか確認する（トップと Elevator Talk の両方）
 - [ ] Elevator Talk のセリフの型（`works/elevator-talk/data.js` の THEMES）が自然な英語か確認する

@@ -123,6 +123,7 @@
     endAt = Date.now() + totalSeconds() * 1000;
     el.start.textContent = "ストップ";
     el.selfcheck.hidden = true;
+    resetSelfcheck();
     el.feedback.hidden = true;
     [el.theme, el.level, el.duration, el.shuffle].forEach((c) => { c.disabled = true; });
     if (micWanted) startRecognition();
@@ -220,18 +221,42 @@
   }
 
   // ---------- self check & history ----------
+  // 1回の練習につき記録は1件。押し直したときは、その回の記録を書きかえる
+  let roundRecordAt = null;
+  const selfcheckNote = $("selfcheckNote");
+
+  function resetSelfcheck() {
+    roundRecordAt = null;
+    selfcheckNote.textContent = "";
+    el.selfcheck.querySelectorAll("button[data-result]").forEach((b) => {
+      b.classList.remove("is-on");
+      b.setAttribute("aria-pressed", "false");
+    });
+  }
+
   el.selfcheck.addEventListener("click", (e) => {
     const btn = e.target.closest("button[data-result]");
     if (!btn) return;
     const history = store.get(HISTORY_KEY, []);
-    history.push({
-      at: new Date().toISOString(),
-      theme: currentTheme().id,
-      level: Number(el.level.value),
-      result: btn.dataset.result
-    });
+    const existing = roundRecordAt && history.find((h) => h.at === roundRecordAt);
+    if (existing) {
+      existing.result = btn.dataset.result;
+    } else {
+      roundRecordAt = new Date().toISOString();
+      history.push({
+        at: roundRecordAt,
+        theme: currentTheme().id,
+        level: Number(el.level.value),
+        result: btn.dataset.result
+      });
+    }
     store.set(HISTORY_KEY, history.slice(-200));
-    el.selfcheck.hidden = true;
+    el.selfcheck.querySelectorAll("button[data-result]").forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle("is-on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    selfcheckNote.textContent = "「" + btn.textContent + "」で記録しました。押し直すと変更できます。";
     renderStats();
   });
 
