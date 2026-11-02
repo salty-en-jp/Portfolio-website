@@ -3,6 +3,7 @@
 
   const THEMES = window.THEMES;
   const QUESTIONS = window.CHECK_QUESTIONS;
+  const ADVANCED = window.ADVANCED_QUESTIONS || [];
   const ENDPOINT = (window.ELEVATOR_TALK_CONFIG || {}).feedbackEndpoint || "";
   const FLOORS = 5;
 
@@ -376,9 +377,49 @@
 
   el.checkMode.addEventListener("change", renderQuiz);
 
+  let advancedIndex = Math.floor(Math.random() * Math.max(1, ADVANCED.length));
+
   function renderQuiz() {
     if (el.checkMode.value === "mine") renderMistakeCard();
+    else if (el.checkMode.value === "advanced") renderAdvancedQuestion();
     else renderBasicQuestion();
+  }
+
+  function renderAdvancedQuestion() {
+    const q = ADVANCED[advancedIndex % ADVANCED.length];
+    // 2つの言い方の並びは毎回ランダム
+    const naturalFirst = Math.random() < 0.5;
+    const choices = naturalFirst ? [q.natural, q.stiff] : [q.stiff, q.natural];
+    const answer = naturalFirst ? 0 : 1;
+    const frag = document.createDocumentFragment();
+    frag.append(makeP("場面：" + q.scene, "card-label"));
+    frag.append(makeP("どっちが自然？", "quiz-sentence"));
+    frag.append(makeP("どちらも文法は正しい英文です。この場面に合うほうを選んでください。", "muted"));
+    const list = document.createElement("div");
+    list.className = "choices";
+    choices.forEach((c, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "choice";
+      b.textContent = c;
+      b.addEventListener("click", () => {
+        list.querySelectorAll("button").forEach((x, j) => {
+          x.disabled = true;
+          if (j === answer) x.classList.add("is-correct");
+        });
+        if (i !== answer) b.classList.add("is-wrong");
+        const result = makeP((i === answer ? "正解！ " : "おしい。 ") + q.reason, "why");
+        const next = document.createElement("button");
+        next.type = "button";
+        next.className = "primary";
+        next.textContent = "次の問題";
+        next.addEventListener("click", () => { advancedIndex++; renderAdvancedQuestion(); });
+        el.quiz.append(result, next);
+      });
+      list.append(b);
+    });
+    frag.append(list);
+    el.quiz.replaceChildren(frag);
   }
 
   function renderBasicQuestion() {
