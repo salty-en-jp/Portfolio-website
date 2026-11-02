@@ -27,8 +27,8 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261102e">
-  <script src="analytics.js?v=20261102e" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261102f">
+  <script src="analytics.js?v=20261102f" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -140,6 +140,10 @@
                 alt="動画の再生中に確認クイズが表示され、下に視聴進捗31%と視聴済み区間4/13が表示されている画面">
               <figcaption>動画の途中で出題される確認クイズ。視聴済みの区間はサーバー側で記録します。</figcaption>
             </figure>
+            <div class="work-role">
+              <p><strong>担当</strong>企画・仕様・動作確認と細かな修正。コードの多くは AI が生成。</p>
+              <p>構成は AI に3案ほど出してもらって比べました。動画をクラウドで管理することにセキュリティ面の不安があったため、LAN 内だけで公開する構成を選びました。</p>
+            </div>
             <div class="tags">
               <span>Python</span><span>FastAPI</span><span>WebSocket</span><span>JavaScript</span><span>Uvicorn</span>
             </div>
@@ -200,6 +204,10 @@
                 alt="テーマ「好きな食べ物」とセリフの型3つ、エレベーターが3階、残り17秒と表示された練習画面">
               <figcaption>エレベーターが1階から5階に着くまでの30秒で、セリフの型を手がかりに話し切ります。</figcaption>
             </figure>
+            <div class="work-role">
+              <p><strong>担当</strong>企画（テーマとセリフの型、3段階のレベル、違和感チェックの仕組み）と、英語の問題の確認・実機での動作確認。仕様とコードは AI と相談しながら作成。</p>
+              <p>企画の段階では、アプリとしての実現方法までは考えられていませんでした。API キーを守る中継サーバーなどの実現方法は、AI と相談して決めました。</p>
+            </div>
             <div class="tags">
               <span>JavaScript</span><span>Web Speech API</span><span>Gemini API</span><span>Cloudflare Workers</span><span>GitHub Pages</span>
             </div>
@@ -257,6 +265,9 @@
                 aria-label="一人称視点の空中戦。4機の敵にロックオンマーカーが付き、発射したミサイルが大きくうねりながら敵機に命中していく"></video>
               <figcaption>乱戦中に4機へロックオンし、ミサイルを一斉発射する場面（音なし・15秒）。ブラウザでそのまま遊べます（キーボードとマウス、またはゲームパッド）。</figcaption>
             </figure>
+            <div class="work-role">
+              <p><strong>担当</strong>企画・仕様・ゲームフロー・バランス調整・動作確認。画面設計とコードの多くは Claude が生成し、仕様と照らして確認・修正しました。</p>
+            </div>
             <div class="tags">
               <span>JavaScript</span><span>Three.js</span><span>Cloudflare Pages</span>
             </div>
