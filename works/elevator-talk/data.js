@@ -72,9 +72,44 @@ window.CHECK_QUESTIONS = [
     reason: "自分が退屈しているときは bored。I'm boring は「私はつまらない人間だ」になる。"
   },
   {
-    sentence: "This ramen is very delicious.",
-    choices: ["This ramen is much delicious.", "This ramen is so good.", "This ramen is very deliciously."],
-    answer: 1,
-    reason: "delicious はそれだけで「とてもおいしい」なので very はあまり付けない。会話では so good が自然。"
+    sentence: "I'm looking forward to see you.",
+    choices: ["I'm looking forward to seeing you.", "I'm looking forward for seeing you.", "I'm looking forward to saw you."],
+    answer: 0,
+    reason: "look forward to の to は前置詞なので、後ろは動詞の -ing 形になる。"
+  }
+];
+
+// 上級（どっちが自然？）。どちらも文法としては正しいが、その場面ではもう一方のほうが自然な問題。
+// natural が自然な言い方、stiff が正しいけれど硬い・場面に合わない言い方。
+window.ADVANCED_QUESTIONS = [
+  {
+    scene: "友達とラーメンを食べながら",
+    stiff: "This ramen is very delicious.",
+    natural: "This ramen is so good.",
+    reason: "very delicious もまちがいではないが、delicious はそれだけで「とてもおいしい」。友達との会話では so good や really good のほうがよく使われる。"
+  },
+  {
+    scene: "友達に「元気？」と聞かれて",
+    stiff: "I'm fine, thank you. And you?",
+    natural: "Pretty good! How about you?",
+    reason: "I'm fine, thank you. も正しいが、教科書どおりで少し硬く、そっけなく聞こえることもある。友達には Pretty good! や Not bad! が気軽。"
+  },
+  {
+    scene: "友達を少し待たせるとき",
+    stiff: "Please wait a moment.",
+    natural: "Hang on a sec.",
+    reason: "Please wait a moment. はお店や受付のような丁寧な場面向き。友達には Hang on a sec. や Just a sec. が自然。"
+  },
+  {
+    scene: "初対面の人に趣味を聞くとき",
+    stiff: "What's your hobby?",
+    natural: "What do you like to do in your free time?",
+    reason: "What's your hobby? も通じるが、hobby は「打ち込んでいる趣味」の響きがあり、会話のきっかけとしては少し唐突。free time を聞くほうが答えやすい。"
+  },
+  {
+    scene: "アメリカのレストランでトイレの場所を聞くとき",
+    stiff: "Where is the toilet?",
+    natural: "Where's the restroom?",
+    reason: "toilet はアメリカでは便器そのものを指すことが多く、少し直接的に聞こえる。お店では restroom（イギリスでは toilet や loo）が自然。"
   }
 ];
