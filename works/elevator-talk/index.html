@@ -27,8 +27,8 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261102b">
-  <script src="../../analytics.js?v=20261102b" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261102c">
+  <script src="../../analytics.js?v=20261102c" defer></script>
 </head>
 <body>
   <header class="bar">
@@ -104,8 +104,9 @@
 
       <div class="selfcheck" id="selfcheck" hidden>
         <p>最後まで話し切れましたか？</p>
-        <button type="button" class="ghost" data-result="done">話し切れた</button>
-        <button type="button" class="ghost" data-result="stuck">途中で止まった</button>
+        <button type="button" class="ghost" data-result="done" aria-pressed="false">話し切れた</button>
+        <button type="button" class="ghost" data-result="stuck" aria-pressed="false">途中で止まった</button>
+        <p class="selfcheck-note" id="selfcheckNote" aria-live="polite"></p>
       </div>
 
       <div class="feedback-actions">
@@ -141,8 +142,8 @@
     <p>入力内容と記録は、このブラウザの中にだけ保存されます。このページでは、利用状況の把握のために Google アナリティクス（Cookie を使用）を利用しています。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">データの扱いについて</a></p>
   </footer>
 
-  <script src="config.js?v=20261102b"></script>
-  <script src="data.js?v=20261102b"></script>
-  <script src="app.js?v=20261102b"></script>
+  <script src="config.js?v=20261102c"></script>
+  <script src="data.js?v=20261102c"></script>
+  <script src="app.js?v=20261102c"></script>
 </body>
 </html>
