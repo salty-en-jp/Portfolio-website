@@ -65,5 +65,5 @@ gantt
 - [x] LINE や Slack にURLを貼り、OGP画像が表示されるか確認する（トップと Elevator Talk の両方）
 - [ ] Elevator Talk のセリフの型（`works/elevator-talk/data.js` の THEMES）が自然な英語か確認する
 - [ ] 違和感チェック8問（同じく CHECK_QUESTIONS）の英語と解説を確認する。特に「play with」と、新しく足した「look forward to see」
-- [ ] 上級（どっちが自然？）5問（同じく ADVANCED_QUESTIONS）の英語と解説を確認する。「very delicious」はここに移した
+- [ ] 上級（どれが自然？）5問（選択肢は各3つ）（同じく ADVANCED_QUESTIONS）の英語と解説を確認する。「very delicious」はここに移した
 - [ ] 自分で使ったり、知り合いの教員に Elevator Talk を使ってもらったりして、型ありと型なしで話しやすさを比べる
