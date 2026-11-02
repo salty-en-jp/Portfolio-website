@@ -387,14 +387,17 @@
 
   function renderAdvancedQuestion() {
     const q = ADVANCED[advancedIndex % ADVANCED.length];
-    // 2つの言い方の並びは毎回ランダム
-    const naturalFirst = Math.random() < 0.5;
-    const choices = naturalFirst ? [q.natural, q.stiff] : [q.stiff, q.natural];
-    const answer = naturalFirst ? 0 : 1;
+    // 選択肢の並びは毎回ランダム
+    const choices = [q.natural].concat(q.others);
+    for (let i = choices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [choices[i], choices[j]] = [choices[j], choices[i]];
+    }
+    const answer = choices.indexOf(q.natural);
     const frag = document.createDocumentFragment();
     frag.append(makeP("場面：" + q.scene, "card-label"));
-    frag.append(makeP("どっちが自然？", "quiz-sentence"));
-    frag.append(makeP("どちらも文法は正しい英文です。この場面に合うほうを選んでください。", "muted"));
+    frag.append(makeP("どれがいちばん自然？", "quiz-sentence"));
+    frag.append(makeP("どれも文法は正しい英文です。この場面にいちばん合うものを選んでください。", "muted"));
     const list = document.createElement("div");
     list.className = "choices";
     choices.forEach((c, i) => {
