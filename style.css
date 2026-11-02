@@ -246,6 +246,10 @@ nav a:hover {
   align-items: start;
 }
 
+.work-shots-even {
+  grid-template-columns: 1fr 1fr;
+}
+
 .work-lead {
   margin-top: 0;
   color: #333 !important;
