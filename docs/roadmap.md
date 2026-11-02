@@ -65,4 +65,4 @@ gantt
 - [ ] LINE や Slack にURLを貼り、OGP画像が表示されるか確認する（トップと Elevator Talk の両方）
 - [ ] Elevator Talk のセリフの型（`works/elevator-talk/data.js` の THEMES）が自然な英語か確認する
 - [ ] 違和感チェック8問（同じく CHECK_QUESTIONS）の英語と解説を確認する。特に「very delicious」「play with」の2問
-- [ ] サークルのメンバーに Elevator Talk を使ってもらい、型ありと型なしで「話し切れた」割合を比べる
+- [ ] 自分で使ったり、知り合いの教員に Elevator Talk を使ってもらったりして、型ありと型なしで話しやすさを比べる
