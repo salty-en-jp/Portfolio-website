@@ -46,8 +46,8 @@ gantt
 
 ### 完了条件
 
-- [ ] すべての実績に画像かGIFが1つ以上ある（画像認識AIのプロジェクトは、掲載許可が出るまで非公開）
-- [ ] すべての実績に「課題→工夫→結果→学び」が書かれている（掲載中の Works 01・02 は済み）
+- [x] すべての実績に画像かGIFが1つ以上ある（Works 01〜03。03 は動画つき。画像認識AIのプロジェクトは、掲載許可が出るまで非公開）
+- [ ] すべての実績に「課題→工夫→結果→学び」が書かれている（Works 01・03 は済み。Works 02 Elevator Talk の結果と学びは、型あり／型なしの検証のあとに書く）
 - [x] ボランティア経験（英語指導・環境保全祭りのガイド）が Activities に載っている
 - [x] 連絡先がある（Googleフォーム）
 - [x] スマホ幅で表示が崩れない（幅320〜1920pxの7サイズで確認）
@@ -60,7 +60,7 @@ gantt
 - [x] PageSpeed Insights（https://pagespeed.web.dev/）でトップと Elevator Talk を測る（2026-11-02、公開中のサイトを同じエンジンの Lighthouse で計測。PCは全項目100。スマホは Performance がトップ87・Elevator Talk 83で、ほかは100。差はほぼ Google アナリティクスのスクリプトの読み込み分）
 - [ ] 実機のスマホでトップと Elevator Talk の表示を確認する（iPhone と Android）
 - [x] Elevator Talk のキーボード入力でAIフィードバックまで動くことを確認する
-- [x] 実機のスマホで Elevator Talk のマイク入力（文字起こし）を試す。特に iPhone の Safari（2026-11-02、スマホのブラウザで動作を確認）
+- [x] 実機のスマホで Elevator Talk のマイク入力（文字起こし）を試す。特に iPhone の Safari（2026-11-02、iPhone の Safari で動作を確認）
 - [x] お問い合わせフォームのボタンを押し、フォームが開いて回答を受け付けているか確認する
 - [x] LINE や Slack にURLを貼り、OGP画像が表示されるか確認する（トップと Elevator Talk の両方）
 - [ ] Elevator Talk のセリフの型（`works/elevator-talk/data.js` の THEMES）が自然な英語か確認する
