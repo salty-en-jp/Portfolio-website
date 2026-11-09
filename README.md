@@ -93,8 +93,13 @@ https://www.siw.ac.jp/archives/4059
 .
 ├── index.html
 ├── style.css
+├── analytics.js     # GA4 の独自イベント（タグ本体は各ページの <head> 直下）
 ├── favicon.svg      # ブラウザのタブに表示するアイコン
 ├── ogp.png          # SNS共有時のプレビュー画像（1200×630）
+├── images/          # 作品ごとの画像・動画
+│   ├── evc/                     # Educational Video Creator
+│   ├── elevator-talk/           # Elevator Talk（ページ用 OGP 画像を含む）
+│   └── mech/                    # メカローグライク
 ├── docs/
 │   ├── roadmap.md               # リニューアル計画（ガントチャート・完了条件）
 │   └── elevator-talk-spec.md    # 英語学習ツールの仕様書
