@@ -249,6 +249,43 @@ nav a:hover {
   border: 1px solid #ddd;
 }
 
+.skill-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skills-heading {
+  margin-top: 0;
+}
+
+.tech-note {
+  margin: 0 0 12px;
+  color: #595959;
+  font-size: 13px;
+}
+
+.tech-list {
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+.tech-list div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.tech-list dt {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tech-list dd {
+  margin: 0;
+  color: #333;
+}
+
 .skill {
   min-height: 160px;
   padding: 34px;
@@ -603,6 +640,11 @@ footer p {
 
   .skill-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tech-list div {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 
   .work-card {
