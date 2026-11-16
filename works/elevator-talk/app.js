@@ -168,7 +168,8 @@
     el.mic.hidden = false;
     el.mic.addEventListener("click", () => {
       micWanted = !micWanted;
-      el.mic.textContent = "マイクで話す：" + (micWanted ? "オン" : "オフ");
+      el.mic.textContent = micWanted ? "マイク使用中（押すとオフ）" : "マイクを使う";
+      el.mic.setAttribute("aria-pressed", micWanted ? "true" : "false");
       el.mic.classList.toggle("is-on", micWanted);
       el.micNote.textContent = micWanted
         ? "スタートすると文字起こしが始まります。音声はブラウザの音声認識サービスに送られます。"
@@ -355,6 +356,9 @@
     }
     frag.append(makeP("AIの指摘はまちがうこともあります。自分の感覚でも確かめてください。", "muted small"));
     el.feedback.replaceChildren(frag);
+    // 本物のフィードバックが出たら、見本は隠す
+    const sample = document.querySelector(".sample");
+    if (sample) sample.hidden = true;
   }
 
   function saveMistakes(improvements) {

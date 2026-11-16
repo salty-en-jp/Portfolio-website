@@ -38,8 +38,8 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261116b">
-  <script src="../../analytics.js?v=20261116b" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261116c">
+  <script src="../../analytics.js?v=20261116c" defer></script>
 </head>
 <body>
   <header class="bar">
@@ -56,7 +56,11 @@
     <!-- Elevator Talk -->
     <section id="talk" class="panel">
       <h1>Elevator Talk</h1>
-      <p class="lead">1階から5階に着くまでの30秒で、テーマについて英語で話し切る練習です。<br>セリフの型を手がかりに、まずは最後まで話すことを目指します。</p>
+      <p class="lead">エレベーターが1階から5階に着くまでの30〜60秒で、テーマについて英語で話し切る練習です。<br>セリフの型を手がかりに、まずは最後まで話すことを目指します。</p>
+      <p class="about-note">
+        塩田 颯（さいたまIT・WEB専門学校 プロジェクトマネージャー専攻）の作品です。「セリフの型があれば、英語を話し切れるか」という仮説を確かめるために企画しました。<a href="../../#work-et">制作の背景を見る</a><br>
+        上の「違和感チェック」タブでは、不自然な英語を見抜くクイズができます。
+      </p>
 
       <div class="controls">
         <label>テーマ
@@ -106,7 +110,7 @@
 
       <div class="actions">
         <button type="button" id="start" class="primary">スタート</button>
-        <button type="button" id="mic" class="ghost" hidden>マイクで話す：オフ</button>
+        <button type="button" id="mic" class="ghost" aria-pressed="false" hidden>マイクを使う</button>
       </div>
       <p class="note" id="micNote"></p>
 
@@ -123,6 +127,16 @@
       <div class="feedback-actions">
         <button type="button" id="feedbackBtn" class="primary" disabled>AIにフィードバックをもらう</button>
         <p class="note">送信した文章は外部のAIサービス（Google Gemini）に送られます。個人情報は入力しないでください。</p>
+      </div>
+
+      <div class="sample" aria-label="AIフィードバックの例">
+        <p class="sample-label">AIフィードバックの例</p>
+        <div class="improvement">
+          <p class="from">lately i'm into vibe coding</p>
+          <p class="to">lately i've been into vibe coding</p>
+          <p class="why">最近ずっとハマっていることを表すには、現在完了進行形を使うとより自然です。</p>
+        </div>
+        <p class="note">直された文は「違和感チェック」に、自分専用の問題として保存されます。</p>
       </div>
 
       <div id="feedback" class="feedback" hidden aria-live="polite"></div>
@@ -154,8 +168,8 @@
     <p>入力内容と記録は、このブラウザの中にだけ保存されます。このページでは、利用状況の把握のために Google アナリティクス（Cookie を使用）を利用しています。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">データの扱いについて</a></p>
   </footer>
 
-  <script src="config.js?v=20261116b"></script>
-  <script src="data.js?v=20261116b"></script>
-  <script src="app.js?v=20261116b"></script>
+  <script src="config.js?v=20261116c"></script>
+  <script src="data.js?v=20261116c"></script>
+  <script src="app.js?v=20261116c"></script>
 </body>
 </html>
