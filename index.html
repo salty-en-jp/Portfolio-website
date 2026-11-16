@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- 自分の端末を計測から外す：URL に ?notrack を付けて一度開くと、この端末・ブラウザでは GA4 に送らない（?track で元に戻す） -->
+  <script>
+    (function () {
+      try {
+        var q = location.search;
+        if (/[?&]notrack(=|&|$)/.test(q)) localStorage.setItem("notrack", "1");
+        if (/[?&]track(=|&|$)/.test(q)) localStorage.removeItem("notrack");
+        if (localStorage.getItem("notrack") === "1") window["ga-disable-G-6JSTE2WZ4C"] = true;
+      } catch (e) { /* localStorage が使えないときは何もしない */ }
+    })();
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JSTE2WZ4C"></script>
   <script>
@@ -27,8 +38,8 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261116">
-  <script src="analytics.js?v=20261116" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261116b">
+  <script src="analytics.js?v=20261116b" defer></script>
 </head>
 <body>
   <header class="site-header">
