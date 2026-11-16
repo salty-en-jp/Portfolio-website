@@ -82,6 +82,19 @@
     if (!running) resetTimer();
   }
 
+  // 設定のまとめ表示（スマホでは設定をたたみ、この1行だけ見せる）
+  const settings = $("settings");
+  const settingsSummary = $("settingsSummary");
+  function updateSettingsSummary() {
+    const theme = el.theme.options[el.theme.selectedIndex];
+    settingsSummary.textContent =
+      "設定：" + (theme ? theme.text : "") + "・レベル" + el.level.value + "・" + el.duration.value + "秒";
+  }
+  if (window.matchMedia && window.matchMedia("(min-width: 700px)").matches) settings.open = true;
+  [el.theme, el.level, el.duration].forEach((c) => c.addEventListener("change", updateSettingsSummary));
+  el.shuffle.addEventListener("click", () => setTimeout(updateSettingsSummary, 0));
+  updateSettingsSummary();
+
   el.theme.addEventListener("change", renderTheme);
   el.level.addEventListener("change", renderTheme);
   el.duration.addEventListener("change", () => { if (!running) resetTimer(); });
