@@ -90,9 +90,35 @@ textarea {
 }
 
 .lead {
-  margin: 0 0 28px;
+  margin: 0 0 12px;
   color: #555;
   font-size: 15px;
+}
+
+.about-note {
+  margin: 0 0 28px;
+  color: #595959;
+  font-size: 13px;
+}
+
+.sample {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.sample-label {
+  margin: 0 0 8px;
+  color: #595959;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.sample .improvement {
+  margin-bottom: 6px;
 }
 
 .controls {

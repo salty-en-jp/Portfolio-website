@@ -38,8 +38,8 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261116b">
-  <script src="analytics.js?v=20261116b" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261116c">
+  <script src="analytics.js?v=20261116c" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -62,7 +62,7 @@
         <p class="eyebrow">PORTFOLIO</p>
         <h1>塩田 颯</h1>
         <p class="hero-text">
-          さいたまIT・WEB専門学校 プロジェクトマネージャー専攻（4年制）<br>在学中／2028年卒業予定。<br>企画と仕様づくり、動作確認を自分で担当し、<br>AI と一緒に学習支援の Web アプリやゲームを形にしています。
+          さいたまIT・WEB専門学校 <span class="nowrap">プロジェクトマネージャー専攻（4年制）</span><span class="nowrap">在学中／2028年卒業予定。</span><br>企画と仕様づくり、動作確認を自分で担当し、<br>AI と一緒に学習支援の Web アプリやゲームを形にしています。
         </p>
         <div class="button-row hero-actions">
           <a class="button" href="#works" data-track="hero_works">作品を見る</a>
@@ -72,16 +72,16 @@
         </div>
         <div class="hero-visual">
           <a class="hero-card hero-card-evc" href="#work-evc" data-track="hero_card_evc">
-            <img src="images/evc/hero.webp" width="560" height="399" loading="lazy" alt="Educational Video Creator：動画の途中で出題される確認クイズの画面">
+            <img src="images/evc/hero.webp" width="560" height="352" loading="lazy" alt="Educational Video Creator：動画の途中で出題される確認クイズの画面">
             <span>01 Educational Video Creator</span>
+          </a>
+          <a class="hero-card hero-card-et" href="#work-et" data-track="hero_card_et">
+            <img src="images/elevator-talk/hero.webp" width="560" height="319" loading="lazy" alt="Elevator Talk：エレベーターのタイマーと、テーマ「好きな食べ物」のセリフの型が並ぶ練習画面">
+            <span>02 Elevator Talk</span>
           </a>
           <a class="hero-card hero-card-mech" href="#work-mech" data-track="hero_card_mech">
             <img src="images/mech/hero.webp" width="560" height="276" loading="lazy" alt="メカローグライク：4機にロックオンしてミサイルを撃つ空中戦の画面">
             <span>03 メカローグライク</span>
-          </a>
-          <a class="hero-card hero-card-et" href="#work-et" data-track="hero_card_et">
-            <img src="images/elevator-talk/hero.webp" width="560" height="173" loading="lazy" alt="Elevator Talk：セリフの型とエレベーターのタイマーが並ぶ練習画面">
-            <span>02 Elevator Talk</span>
           </a>
         </div>
       </div>
@@ -91,6 +91,10 @@
       <div class="container narrow">
         <p class="section-label">01 / ABOUT</p>
         <h2>アイデアで生活を楽しくしたい</h2>
+        <p>
+          学ぶことも遊ぶことも、ちょっとした工夫でもっと楽しくなると思っています。
+          学習支援のWebアプリもゲームも、私にとっては、その「楽しくする工夫」を形にして試す場です。
+        </p>
         <p>
           Webアプリケーションやゲーム、スマートフォン向けアプリなどを、ClaudeやKiroを使ったspec駆動開発で制作しています。
           最初に仕様（spec）を書いて大筋を作り、使いながら気づいたことを仕様に足して改善を重ね、完成させていきます。
@@ -102,7 +106,7 @@
           <div><dt>2015</dt><dd>帰国後、蛍めぐり祭のボランティアに参加（現在も継続中）</dd></div>
           <div><dt>2024</dt><dd>さいたまIT・WEB専門学校 プロジェクトマネージャー専攻 入学</dd></div>
           <div><dt>2025</dt><dd>保育園 キラここキッズ軽井沢でボランティアスタッフとして活動</dd></div>
-          <div><dt>2026</dt><dd>Educational Video Creator、Elevator Talk を制作</dd></div>
+          <div><dt>2026</dt><dd>Educational Video Creator、Elevator Talk、メカローグライクを制作</dd></div>
           <div><dt>2028</dt><dd>卒業予定</dd></div>
         </dl>
       </div>
@@ -151,7 +155,7 @@
             <h2>Educational Video Creator</h2>
             <p class="work-lead">動画学習を「再生しただけ」で終わらせないための、学習管理システム</p>
             <figure class="work-shot">
-              <img src="images/evc/quiz.webp" width="1200" height="856" loading="lazy"
+              <img src="images/evc/quiz-crop.webp" width="870" height="490" loading="lazy"
                 alt="動画の再生中に確認クイズが表示され、下に視聴進捗31%と視聴済み区間4/13が表示されている画面">
               <figcaption>動画の途中で出題される確認クイズ。視聴済みの区間はサーバー側で記録します。</figcaption>
             </figure>
@@ -263,6 +267,7 @@
             </details>
             <div class="button-row">
               <a class="button" href="works/elevator-talk/" data-track="works_try_elevator_talk">使ってみる</a>
+              <a class="button button-outline" href="https://github.com/salty-en-jp/Portfolio-website/blob/main/docs/elevator-talk-spec.md" target="_blank" rel="noopener noreferrer">仕様書を見る ↗</a>
               <a class="button button-outline" href="https://github.com/salty-en-jp/Portfolio-website/tree/main/works/elevator-talk" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
             </div>
           </div>
@@ -272,7 +277,7 @@
           <div class="work-number">03</div>
           <div class="work-content">
             <p class="work-type">GAME / 3D / THREE.JS</p>
-            <h2>メカローグライク（仮）</h2>
+            <h2>メカローグライク</h2>
             <p class="work-lead">機体を組み上げて、20分間を生き抜く3Dメカのローグライク・アクション</p>
             <figure class="work-shot">
               <video class="autoplay-when-visible" src="images/mech/missile.mp4" poster="images/mech/missile-poster.webp"
