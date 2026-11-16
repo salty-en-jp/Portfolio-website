@@ -13,6 +13,16 @@
   }
 
   ready(function () {
+    // 計測を止めている端末では、ページの一番下に小さく表示する
+    if (window["ga-disable-G-6JSTE2WZ4C"]) {
+      var note = document.createElement("p");
+      note.className = "notrack-note";
+      note.textContent = "この端末は計測しない設定です（URL の最後に ?track を付けて開くと元に戻ります）";
+      note.style.cssText = "margin:8px 0 0;color:#2d6a4f;font-size:12px;";
+      var foot = document.querySelector("footer");
+      (foot || document.body).appendChild(note);
+    }
+
     // 「読まれた」：作品欄が画面に入ったら1回だけ送る
     var works = document.getElementById("works");
     if (works && "IntersectionObserver" in window) {
